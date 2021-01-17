@@ -6,11 +6,11 @@ function Section(props) {
   return (
     <section className={s.sectionDiv}>
       <div className={s.sectionDiv__left}>
-        <p className={s.secTitle}>Եղիր առաջինը</p>
+        <p className={s.beFirst}>Եղիր առաջինը</p>
         <div className={s.about}>Սովորիր Ծրագրավորում</div>
 
         <Link to={'/moreInfo'} className={s.moreInfo}>
-          Իմանալ ավելին{' '}
+          Իմանալ ավելին
         </Link>
         <div className={s.callImg}></div>
       </div>
