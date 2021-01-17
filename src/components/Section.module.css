@@ -1,0 +1,71 @@
+.sectionDiv {
+  width: 100%;
+  display: flex;
+}
+.sectionDiv__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sectionDiv__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 95px;
+}
+.secTitle {
+  color: #ffffff;
+  margin-top: 168.49px;
+  font-family: Arial AMU;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 150.49%;
+}
+
+.about {
+  width: 10px;
+  margin-bottom: 40.1px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 150.49%;
+  color: #604cda;
+}
+
+.moreInfo {
+  background: #604cda;
+  border-radius: 68px;
+  text-decoration: none;
+  color: white;
+  padding: 20px 54px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 134.8%;
+}
+
+/* .moreInfo:hover {
+  color: #1c0037;
+  font-size: 15px;
+} */
+
+.callImg {
+  width: 81.1px;
+  height: 81.1px;
+  background-image: url(./callImg.png);
+  background-size: cover;
+  margin-top: 55.19px;
+}
+
+.workImg {
+  width: 740px;
+  height: 487px;
+  background-image: url(./sectionLogo.png);
+  background-size: cover;
+  margin-right: -71.9px;
+}
