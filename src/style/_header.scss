@@ -24,14 +24,14 @@ header{
   }
 
   .header__nav{
-
+    width: 53.8%;
     ul{
+      width: 100%;
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       li{
-        margin:0px 20px;
-        padding: 0px 10px;
         display: flex;
         align-items: center;
         position: relative;
@@ -73,7 +73,7 @@ header{
           width: 10px;
           height: 10px;
           position: absolute;
-          right: -10px;
+          right: -15px;
           border-bottom: 2px solid $arrow-color;
           border-right: 2px solid $arrow-color;
           transform: rotate(45deg);
@@ -82,5 +82,15 @@ header{
       }
     }
 
+  }
+}
+.header__right{
+  display: flex;
+  align-items: center;
+
+
+  .lang{
+    display: flex;
+    align-items: center;
   }
 }
