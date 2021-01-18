@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../style/style.scss';
 import logo from '../img/logo.svg';
 import search from '../img/serch.svg';
-import am from '../img/am.png'
+import am from '../img/am.svg';
+import ru from '../img/ru.svg';
+import en from '../img/en.svg';
+import user from '../img/user.png';
 import {Link} from 'react-router-dom';
 export default function Header(props) {
+
+    let [lang, setLang] = useState('/')
+    const changeLang = (e) => {
+        setLang(prev => prev = e.target.dataset.leng)
+    }
+
     return (
         <header>
             <div className="logo">
@@ -39,19 +48,26 @@ export default function Header(props) {
             <div className="header__right">
                 <div className="search">
                     <img src={search} alt=""/>
+
                 </div>
                 <div className="lang">
                     <ul>
-                        <li>
-                            <img src={am} alt=""/>
+                        <li style={lang === '/' ? {order:1}: {order:2}}>
+                            <Link to='/' onClick={changeLang}><img src={am} alt="" data-leng='/'/></Link>
                         </li>
-                        <li>
-                            <img src="" alt=""/>
+                        <li style={lang === '/ru' ? {order:1}: {order:2}}>
+                            <Link to='/ru' onClick={changeLang}><img src={ru} alt=""  data-leng='/ru' /></Link>
                         </li>
-                        <li>
-                            <img src="" alt=""/>
+                        <li style={lang === '/en' ? {order:1}: {order:2}}>
+                            <Link to='/en' onClick={changeLang}><img src={en} alt=""  data-leng='/en'/></Link>
                         </li>
                     </ul>
+                </div>
+                <div className="header__user">
+                    <img src={user} alt=""/>
+                </div>
+                <div className="dark_mode">
+                    <input type="checkbox"/>
                 </div>
             </div>
         </header>

@@ -85,12 +85,60 @@ header{
   }
 }
 .header__right{
+  height: 100%;
   display: flex;
   align-items: center;
 
-
+  .search{
+    margin-right: 34px;
+    cursor: pointer;
+  }
   .lang{
-    display: flex;
-    align-items: center;
+    width: 56px;
+    height: 100%;
+
+    margin-right: 15px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover{
+      overflow: visible;
+    }
+
+    ul{
+      position: absolute;
+      right: 28px;
+      top: -15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &::after{
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-bottom: 2px solid $white;
+        border-right: 2px solid $white;
+        transform: rotate(45deg);
+        position: absolute;
+        right: -16px;
+        top: 5px;
+      }
+      li{
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+
+      }
+    }
+  }
+  img{
+    width: 28px;
+    height: 28px;
+  }
+  .header__user{
+    margin-right: 30px;
   }
 }
