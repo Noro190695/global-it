@@ -12,29 +12,32 @@ body{
   width: 100vw;
   min-height: 500vh;
   position: relative;
-
-  &::before{
-    content: '';
+  .dark__mode{
     display: block;
     width: 100%;
-    height: 95vh;
-    background-color: $main-color-1;
-    clip-path: polygon(0 0, 99% 0, 100% 94%, 50% 100%, 0 94%);
-    position: absolute;
-    z-index: -1;
-
+    height: 100%;
+    background: red;
+    &::before{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 95vh;
+      background-color: $main-color-1;
+      clip-path: polygon(0 0, 99% 0, 100% 94%, 50% 100%, 0 94%);
+      position: absolute;
+      z-index: -1;
+    }
+    &::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 110%;
+      background-color: $main-color-2;
+      position: absolute;
+      z-index: -2;
+    }
   }
-  &::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 110%;
-    background-color: $main-color-2;
-    position: absolute;
-    z-index: -2;
-    top: -10%;
 
-  }
 
 }
 .wrapper{
