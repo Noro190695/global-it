@@ -12,14 +12,20 @@ header{
       margin-right: 10px;
     }
     h2{
+
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 28px;
-      color: $white;
       span{
         color: $color-1;
       }
+    }
+    .header__logo-light{
+      color: $arrow-color;
+    }
+    .header__logo-dark{
+      color: $white;
     }
   }
 
@@ -42,22 +48,19 @@ header{
           font-weight: bold;
           font-size: 15px;
           letter-spacing: 0.055em;
-          color: $white;
           position: relative;
           transition: .3s;
+
           &::after{
             content: '';
             display: block;
             width: 100%;
             height: 2px;
-            background-color: $link-hover-color;
             position: absolute;
             bottom: -10px;
             transition: .3s;
-           transform-origin: left;
+            transform-origin: left;
             transform: scaleX(0);
-
-
           }
           &:hover{
             color: $link-hover-color;
@@ -65,7 +68,18 @@ header{
           &:hover::after{
             transform: scaleX(1);
           }
-
+        }
+        .header__link-dark{
+          color: $white;
+          &::after{
+            background-color: $link-hover-color;
+          }
+        }
+        .header__link-light{
+          color: $arrow-color;
+          &::after{
+            background-color: $link-hover-color;
+          }
         }
 
         span{

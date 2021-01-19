@@ -30,31 +30,31 @@ export default function Header(props) {
         <header>
             <div className="logo">
                 <img src={logo} alt=""/>
-                <h2>GLOBAL <span> IT</span></h2>
+                <h2 className={props.dark?'header__logo-light':'header__logo-dark'}>GLOBAL <span> IT</span></h2>
             </div>
             <nav className='header__nav'>
                 <ul>
                     <li>
-                        <Link to={'/'}>{
+                        <Link to={'/'} className={props.dark?'header__link-light':'header__link-dark'}>{
                             lang === '/'?data.am.nav[0]:data.ru.nav[0]
                         }</Link>
                     </li>
                     <li>
-                        <Link to={'/service'}>Ծառայություններ</Link>
+                        <Link to={'/service'} className={props.dark?'header__link-light':'header__link-dark'}>Ծառայություններ</Link>
                         <span></span>
                     </li>
                     <li>
-                        <Link to={'/universitet'}>Ֆակուլտետներ</Link>
+                        <Link to={'/universitet'} className={props.dark?'header__link-light':'header__link-dark'}>Ֆակուլտետներ</Link>
                         <span></span>
                     </li>
                     <li>
-                        <Link to={'/blog'}>Բլոգ</Link>
+                        <Link to={'/blog'} className={props.dark?'header__link-light':'header__link-dark'}>Բլոգ</Link>
                     </li>
                     <li>
-                        <Link to={'/gshop'}>Gshop</Link>
+                        <Link to={'/gshop'} className={props.dark?'header__link-light':'header__link-dark'}>Gshop</Link>
                     </li>
                     <li>
-                        <Link to={'/contact'}>Կապ</Link>
+                        <Link to={'/contact'} className={props.dark?'header__link-light':'header__link-dark'}>Կապ</Link>
                     </li>
                 </ul>
             </nav>
