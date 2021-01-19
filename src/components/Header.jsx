@@ -1,25 +1,15 @@
 import React, {useState} from 'react';
 import '../style/style.scss';
 import logo from '../img/logo.svg';
-import search from '../img/serch.svg';
+import searchLight from '../img/serch.svg';
+import searchDark from '../img/search-dark.svg';
 import am from '../img/am.svg';
 import ru from '../img/ru.svg';
 import en from '../img/en.svg';
 import user from '../img/user.png';
 import {Link} from 'react-router-dom';
 
-const data = {
-    am: {
-        nav: ['Գլխավոր'],
 
-    },
-    ru:{
-        nav:['Главная']
-    },
-    en:{
-        nav:['Home']
-    }
-}
 export default function Header(props) {
 
     let [lang, setLang] = useState('/')
@@ -35,9 +25,7 @@ export default function Header(props) {
             <nav className='header__nav'>
                 <ul>
                     <li>
-                        <Link to={'/'} className={props.dark?'header__link-light':'header__link-dark'}>{
-                            lang === '/'?data.am.nav[0]:data.ru.nav[0]
-                        }</Link>
+                        <Link to={'/'} className={props.dark?'header__link-light':'header__link-dark'}>Գլխավոր</Link>
                     </li>
                     <li>
                         <Link to={'/service'} className={props.dark?'header__link-light':'header__link-dark'}>Ծառայություններ</Link>
@@ -60,10 +48,10 @@ export default function Header(props) {
             </nav>
             <div className="header__right">
                 <div className="search">
-                    <img src={search} alt=""/>
+                    <img src={props.dark?searchDark:searchLight} alt=""/>
 
                 </div>
-                <div className="lang">
+                <div className={props.dark?'lang lang-light':'lang lang-dark'}>
                     <ul>
                         <li style={lang === '/' ? {order:1}: {order:2}}>
                             <Link to='/' onClick={changeLang}><img src={am} alt="" data-leng='/'/></Link>

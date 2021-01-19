@@ -68,6 +68,7 @@ header{
           &:hover::after{
             transform: scaleX(1);
           }
+
         }
         .header__link-dark{
           color: $white;
@@ -87,6 +88,7 @@ header{
           width: 10px;
           height: 10px;
           position: absolute;
+          top: 2px;
           right: -15px;
           border-bottom: 2px solid $arrow-color;
           border-right: 2px solid $arrow-color;
@@ -110,7 +112,6 @@ header{
   .lang{
     width: 56px;
     height: 100%;
-
     margin-right: 15px;
     position: relative;
     overflow: hidden;
@@ -131,8 +132,6 @@ header{
         display: block;
         width: 7px;
         height: 7px;
-        border-bottom: 2px solid $white;
-        border-right: 2px solid $white;
         transform: rotate(45deg);
         position: absolute;
         right: -16px;
@@ -144,6 +143,24 @@ header{
         display: flex;
         align-items: center;
 
+
+      }
+    }
+    &-dark{
+      ul{
+        &:after{
+          border-bottom: 2px solid $white;
+          border-right: 2px solid $white;
+        }
+
+      }
+    }
+    &-light{
+      ul{
+        &:after{
+          border-bottom: 2px solid $arrow-color;
+          border-right: 2px solid $arrow-color;
+        }
 
       }
     }
