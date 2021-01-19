@@ -5,7 +5,7 @@ import HeaderDark from './components/header/HeaderDark';
 import Section from './components/Section';
 import HeaderBottom from './components/HeaderBottom';
 import development1 from './components/development1.svg';
-
+import VideoPart from './components/VideoPart';
 
 let data = {
     // data01 : {
@@ -37,7 +37,7 @@ function App() {
         <HeaderDark darkMode={darkMode} dark={dark}/>
         <Section />
         <HeaderBottom data={data} />
-
+        <VideoPart />
       </div>
     </div>
   );
