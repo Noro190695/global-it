@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import '../style/style.scss';
-import logo from '../img/logo.svg';
-import search from '../img/serch.svg';
-import am from '../img/am.svg';
-import ru from '../img/ru.svg';
-import en from '../img/en.svg';
-import user from '../img/user.png';
+import '../../style/style.scss';
+import logo from '../../img/logo.svg';
+import search from '../../img/serch.svg';
+import am from '../../img/am.svg';
+import ru from '../../img/ru.svg';
+import en from '../../img/en.svg';
+import user from '../../img/user.png';
 import {Link} from 'react-router-dom';
 
 const data = {
@@ -20,14 +20,12 @@ const data = {
         nav:['Home']
     }
 }
-export default function Header(props) {
+export default function HeaderDark(props) {
 
     let [lang, setLang] = useState('/')
     const changeLang = (e) => {
         setLang(prev => prev = e.target.dataset.leng)
     }
-    console.log(lang)
-
     return (
         <header>
             <div className="logo">
@@ -36,7 +34,6 @@ export default function Header(props) {
             </div>
             <nav className='header__nav'>
                 <ul>
-
                     <li>
                         <Link to={'/'}>{
                             lang === '/'?data.am.nav[0]:data.ru.nav[0]
@@ -84,7 +81,8 @@ export default function Header(props) {
                 </div>
                 <div className="dark_mode">
                     <label>
-                        <input type="checkbox"/>
+                        <input type="checkbox" onChange={props.darkMode} defaultChecked={props.dark?'checked': ''}/>
+                        <span className="radio" style={props.dark?{transform: 'translateX(-5%)'}:{transform: 'translateX(85%)'}}></span>
                     </label>
                 </div>
             </div>

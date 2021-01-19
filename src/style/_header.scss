@@ -151,23 +151,49 @@ header{
     position: relative;
     background: $bgDarkMode;
     border-radius: 34px;
+    cursor: pointer;
 
-    &::before{
+    &:before {
       content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/dark.svg");
+      background-size: cover;
+      position: absolute;
+      right: 2px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/light.svg");
+      background-size: cover;
+      position: absolute;
+      left: 2px;
+    }
+    .radio{
       display: block;
       width: 25px;
       height: 25px;
       border-radius: 50%;
       background: $radio-color;
       position: absolute;
-      right: -1px;
+      transform: translateX(85%);
+      transition: .3s;
+      z-index: 1;
+    }
+    input{
+      opacity: 0;
+      position: absolute;
+      transition: 1s;
+    }
+    input:checked ~ .radio{
+      transform: translateX(-5%);
 
     }
+  }
 
-  }
-  input{
-    opacity: 0;
-    position: absolute;
-  }
 
 }
