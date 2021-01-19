@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import 'normalize.css';
 import './style/style.scss';
-import HeaderDark from './components/header/HeaderDark';
+import Header from './components/Header';
 import Section from './components/Section';
 import HeaderBottom from './components/HeaderBottom';
 import development1 from './components/development1.svg';
@@ -34,7 +34,7 @@ function App() {
         <div className="dark__mode" style={dark?{display:'none'}:{display:'block'}}></div>
 
       <div className='wrapper'>
-        <HeaderDark darkMode={darkMode} dark={dark}/>
+        <Header darkMode={darkMode} dark={dark}/>
         <Section />
         <HeaderBottom data={data} />
 
