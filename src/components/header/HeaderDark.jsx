@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import '../style/style.scss';
-import logo from '../img/logo.svg';
-import search from '../img/serch.svg';
-import am from '../img/am.svg';
-import ru from '../img/ru.svg';
-import en from '../img/en.svg';
-import user from '../img/user.png';
+import '../../style/style.scss';
+import logo from '../../img/logo.svg';
+import search from '../../img/serch.svg';
+import am from '../../img/am.svg';
+import ru from '../../img/ru.svg';
+import en from '../../img/en.svg';
+import user from '../../img/user.png';
 import {Link} from 'react-router-dom';
 
 const data = {
@@ -20,7 +20,7 @@ const data = {
         nav:['Home']
     }
 }
-export default function Header(props) {
+export default function HeaderDark(props) {
 
     let [lang, setLang] = useState('/')
     const changeLang = (e) => {
