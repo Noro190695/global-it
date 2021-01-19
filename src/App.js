@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Section from './components/Section';
 import HeaderBottom from './components/HeaderBottom';
 import development1 from './components/development1.svg';
-
+import VideoPart from './components/VideoPart';
 
 
 
@@ -26,7 +26,7 @@ function App() {
         <Header />
         <Section />
         <HeaderBottom data={data} />
-
+        <VideoPart />
       </div>
     </div>
   );

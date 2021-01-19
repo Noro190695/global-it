@@ -116,3 +116,30 @@ body{
   letter-spacing: 0.05em;
   color: #FFFFFF;
 }
+
+// video part
+.videoPart {
+  display: flex;
+}
+.videoPart>div>h2 {
+  font-family: ArialArmST;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 39px;
+  line-height: 134.8%;
+  /* or 53px */
+  letter-spacing: 0.055em;
+  color: #FFFFFF;
+}
+.videoPart>div>p {
+  font-family: Arial AMU;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 134.8%;
+  /* or 27px */
+  
+  letter-spacing: 0.055em;
+  
+  color: #FFFFFF;
+}
