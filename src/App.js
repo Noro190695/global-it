@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Section from './components/Section';
 import HeaderBottom from './components/HeaderBottom';
 import development1 from './components/development1.svg';
+import ProgressBar from "./components/ProgresBar/ProgressBar";
+import ProgresBarGroup from "./components/ProgresBar/ProgresBarGroup";
 
 
 let data = {
@@ -37,7 +39,7 @@ function App() {
         <Header darkMode={darkMode} dark={dark}/>
         <Section />
         <HeaderBottom data={data} />
-
+        <ProgresBarGroup dark={dark}/>
       </div>
     </div>
   );
