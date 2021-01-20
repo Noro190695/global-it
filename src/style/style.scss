@@ -10,7 +10,6 @@ body{
 }
 .App {
   width: 100vw;
-  min-height: 500vh;
   position: relative;
   .dark__mode{
     display: block;
@@ -45,10 +44,14 @@ body{
   height: 100%;
   margin: 0 auto;
   padding-top: 40px;
-
 }
 
+@media (max-width: $ipadePro) {
+  .wrapper{
+    width: 90%;
 
+  }
+}
 
 
 

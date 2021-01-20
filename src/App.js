@@ -27,7 +27,7 @@ function App() {
         }
         setDark(prev => prev = JSON.parse(localStorage.getItem('darkMode')))
     }
-    console.log(dark)
+
 
     return (
     <div className='App'>

@@ -4,6 +4,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
 
   .logo{
@@ -172,6 +173,13 @@ header{
   .header__user{
     margin-right: 30px;
   }
+  .burger{
+
+    cursor: pointer;
+    position: absolute;
+    display: none;
+  }
+
 }
 .dark_mode{
   label{
@@ -225,6 +233,66 @@ header{
 
     }
   }
+}
+
+@media (max-width: $ipadePro) {
+    .header__nav{
+      position: absolute;
+      background: $nav-bg;
+      right: 0;
+      top: -34px;
+      max-width: 375px;
+      padding: 0;
+      padding-top: 68px;
+      transform: translateX(120%);
+      transition: .5s;
 
 
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        li{
+          width: 90%;
+          margin: 0;
+
+          a{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            padding: 20px ;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            position: relative;
+          }
+          span{
+            margin-right: 20px;
+            margin-top: 20px;
+
+          }
+        }
+      }
+    }
+  .header__right{
+    position: relative;
+    z-index: 2;
+    padding-right: 60px;
+    transform: translateX(130%);
+    transition: .5s;
+    .search{
+      position: absolute;
+      z-index: 2;
+      transform: translateX(-120px);
+    }
+    .burger{
+      display: block;
+      right: 15px;
+      top: 2px;
+      z-index: 5;
+      transform: translateX(-260px);
+
+    }
+  }
 }

@@ -6,15 +6,23 @@ import searchDark from '../img/search-dark.svg';
 import am from '../img/am.svg';
 import ru from '../img/ru.svg';
 import en from '../img/en.svg';
+import burger from '../img/burger.png';
+import del from '../img/del.png';
 import user from '../img/user.png';
 import {Link} from 'react-router-dom';
 
 
 export default function Header(props) {
-
+    console.log(window.innerWidth)
     let [lang, setLang] = useState('/')
+    let [nav, setNav] = useState(true)
+
     const changeLang = (e) => {
         setLang(prev => prev = e.target.dataset.leng)
+    }
+    const show = (e) => {
+        setNav(prev => !prev)
+        console.log(nav)
     }
     return (
         <header>
@@ -22,7 +30,11 @@ export default function Header(props) {
                 <img src={logo} alt=""/>
                 <h2 className={props.dark?'header__logo-light':'header__logo-dark'}>GLOBAL <span> IT</span></h2>
             </div>
-            <nav className='header__nav'>
+            <nav className='header__nav' style={nav? {
+                transform: 'translateX(0)'
+            }: {
+                transform: 'translateX(120%)'
+            }}>
                 <ul>
                     <li>
                         <Link to={'/'} className={props.dark?'header__link-light':'header__link-dark'}>Գլխավոր</Link>
@@ -46,10 +58,18 @@ export default function Header(props) {
                     </li>
                 </ul>
             </nav>
-            <div className="header__right">
-                <div className="search">
+            <div className="header__right" style={nav? {
+                transform: 'translate(0)'
+            }: {
+                transform: 'translate(130%)'
+            }}>
+                <div className="search" style={nav? {
+                    position: 'static',
+                    transform: 'translateX(0)'
+                }: {
+                    transform: 'translateX(-120px)'
+                }}>
                     <img src={props.dark?searchDark:searchLight} alt=""/>
-
                 </div>
                 <div className={props.dark?'lang lang-light':'lang lang-dark'}>
                     <ul>
@@ -72,6 +92,14 @@ export default function Header(props) {
                         <input type="checkbox" onChange={props.darkMode} defaultChecked={props.dark?'checked': ''}/>
                         <span className="radio" style={props.dark?{transform: 'translateX(-5%)'}:{transform: 'translateX(85%)'}}></span>
                     </label>
+                </div>
+                <div className="burger" onClick={show} style={nav? {
+                    right:  '15px',
+                    transform: 'translateX(0)'
+                }: {
+                    transform: 'translateX(-260px)'
+                }}>
+                    <img src={nav?del:burger} alt=""/>
                 </div>
             </div>
         </header>
